@@ -4,4 +4,8 @@ ADD . /app
 WORKDIR /app
 RUN npm install
 RUN npm link
-ENTRYPOINT /bin/ash
+
+WORKDIR /backup
+
+ENTRYPOINT ["wizzy"]
+CMD ["version"]
